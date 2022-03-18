@@ -27,11 +27,3 @@ test('clicking drawing button displays dibs', async () => {
     expect(displayed).toBe(true);
 });
 
-test('check that adding jduo displays id play duo ', async() =>{
-    await driver.findElement(By.id("draw")).click()
-    await driver.sleep(500);
-    await driver.findElement(By.xpath('(//button[tesxt()="add to duo"])[1')).click();
-  const playerDuo = await driver.findElement(By.id("player-duo"));
-  const displayed = await playerDuo.isDisplayed();
-  expect(displayed).toBe(true)
-})
